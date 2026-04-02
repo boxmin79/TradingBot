@@ -235,8 +235,6 @@
             "mrkt_tp" : ""
         }
     },
-
-
     "ka00001": {
         "id": "ka00001",
         "name": "계좌번호조회",
@@ -459,7 +457,127 @@
             "cncl_qty": ""
         }
     },
-
+    "ka10020": {
+        "id": "ka10020",
+        "name": "호가잔량상위요청",
+        "endpoint": "/api/dostk/rkinfo",
+        "headers": {
+            "Content-Type": "application/json;charset=UTF-8",
+            "authorization": "",
+            "cont-yn": "N",
+            "next-key": "N",
+            "api-id": "ka10020"
+        },
+        "body": {
+            "mrkt_tp": "001",
+            "sort_tp": "",
+            "trde_qty_tp": "",
+            "stk_cnd": "1",
+            "crd_cnd": "0",
+            "stex_tp": "KRX"
+        }
+    },
+    "ka10021": {
+        "id": "ka10021",
+        "name": "호가잔량급증요청",
+        "endpoint": "/api/dostk/rkinfo",
+        "headers": {
+            "Content-Type": "application/json;charset=UTF-8",
+            "api_id": "ka10021",
+            "authorization": "",
+            "cont-yn": "N",
+            "next-key": ""
+        },
+        "body": {
+            "mrkt_tp": "001",
+            "trde_tp": "1",
+            "sort_tp": "1",
+            "tm_tp": "5",
+            "trde_qty_tp": "1",
+            "stk_cnd": "0",
+            "stex_tp": "1"
+        }
+    },
+    "ka10022": {
+        "id": "ka10022",
+        "name": "잔량율급증요청",
+        "endpoint": "/api/dostk/rkinfo",
+        "headers": {
+            "Content-Type": "application/json;charset=UTF-8",
+            "api_id": "ka10022",
+            "authorization": "",
+            "cont-yn": "N",
+            "next-key": ""
+        },
+        "body": {
+            "mrkt_tp": "001",
+            "rt_tp": "1",
+            "tm_tp": "5",
+            "trde_qty_tp": "5",
+            "stk_cnd": "0",
+            "stex_tp": "1"
+        }
+    },
+    "ka10023": {
+        "id": "ka10023",
+        "name": "거래량급증요청",
+        "endpoint": "/api/dostk/rkinfo",
+        "headers": {
+            "Content-Type": "application/json;charset=UTF-8",
+            "api-id": "ka10023",
+            "authorization": "",
+            "cont-yn": "N",
+            "next-key": ""
+        },
+        "body": {
+            "mrkt_tp": "000",
+            "rt_tp": "1",
+            "tm_tp": "1",
+            "trde_qty_tp": "10",
+            "stk_cnd": "0",
+            "stex_tp": "3"
+        }
+    },
+    "ka10030": {
+        "id": "ka10030",
+        "name": "당일거래량상위요청",
+        "endpoint": "/api/dostk/rkinfo",
+        "headers": {
+            "Content-Type": "application/json;charset=UTF-8",
+            "api-id": "ka10030",
+            "authorization": "",
+            "cont-yn": "N",
+            "next-key": ""
+        },
+        "body": {
+            "mrkt_tp": "000",
+            "sort_tp": "1",
+            "mang_stk_incls": "0",
+            "crd_tp": "0",
+            "trde_qty_tp": "0",
+            "pric_tp": "0",
+            "trde_prica_tp": "0",
+            "mrkt_open_tp": "0",
+            "stex_tp": "1"
+        }
+    },
+    "ka10032": {
+        "id": "ka10032",
+        "name": "당일거래량급증요청",
+        "endpoint": "/api/dostk/rkinfo",
+        "headers": {
+            "Content-Type": "application/json;charset=UTF-8",
+            "api-id": "ka10032",
+            "authorization": "",
+            "cont-yn": "N",
+            "next-key": ""
+        },
+        "body": {
+            "mrkt_tp": "000",
+            "mang_stk_incls": "0",
+            "stex_tp": "1"
+        }
+    },            
     "ws_login": {
         "id": "ws_login",
         "name": "웹소켓 로그인",

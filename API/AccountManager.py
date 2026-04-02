@@ -10,18 +10,17 @@ class AccountManager(API):
         # 부모 클래스(API) 초기화: self.cfg, self.file_manager, self.token 등 세팅
         super().__init__()
         
-    def get_account_list(self):
-        """[ka00001] 보유한 계좌 번호 리스트를 반환합니다."""
+    def get_account_no(self):
+        """[ka00001] 보유한 계좌 번호를 반환합니다."""
         params = self._get_params("ka00001")
         if not params: return []
         
         url, headers, body = params
         data, _ = self._requests_post(url, headers, body)
         
-        # 문서 참고: 계좌 리스트는 'list' 키에 담겨 옵니다.
         if data:
-            return data.get("acctNo", [])
-        return []
+            return data.get("acctNo")
+        return None
 
     def get_deposit(self, qry_tp="2"):
         """
@@ -186,7 +185,7 @@ if __name__ == "__main__":
     am = AccountManager()
     
     # 1. 계좌 확인
-    accounts = am.get_account_list()
+    accounts = am.get_account_no()
     print(f"💳 보유 계좌: {accounts}")
     
     if accounts:
